@@ -1,0 +1,234 @@
+---- Minecraft Crash Report ----
+// I blame Dinnerbone.
+
+Time: 1/30/19 5:14 PM
+Description: Watching Server
+
+java.lang.Error
+	at java.lang.Thread.yield(Native Method)
+	at uq.b(SourceFile:147)
+	at uq.a(SourceFile:131)
+	at bci.a(SourceFile:260)
+	at bcm.a(SourceFile:120)
+	at bci.c(SourceFile:255)
+	at bci.b(SourceFile:496)
+	at bbt.a(SourceFile:52)
+	at bbt$$Lambda$2368/72710810.apply(Unknown Source)
+	at bbt.a(SourceFile:153)
+	at bbt.a(SourceFile:51)
+	at ahl.D(SourceFile:2226)
+	at alt.a(SourceFile:32)
+	at alk.a(SourceFile:140)
+	at alk.a(SourceFile:148)
+	at ale.a(SourceFile:56)
+	at ale$$Lambda$2258/1761537639.test(Unknown Source)
+	at bci.a(SourceFile:1803)
+	at ale.a(SourceFile:68)
+	at ajj.a(SourceFile:94)
+	at ahm.cU(SourceFile:604)
+	at ahl.k(SourceFile:2045)
+	at ahm.k(SourceFile:473)
+	at aqc.k(SourceFile:33)
+	at ahl.h(SourceFile:1896)
+	at ahm.h(SourceFile:284)
+	at aqc.h(SourceFile:45)
+	at apn.h(SourceFile:152)
+	at bci.a(SourceFile:988)
+	at ur.a(SourceFile:392)
+	at bci.g(SourceFile:968)
+	at bci.m_(SourceFile:850)
+	at ur.m_(SourceFile:308)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:827)
+	at ts.b(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:756)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:622)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at java.lang.Thread.yield(Native Method)
+	at uq.b(SourceFile:147)
+	at uq.a(SourceFile:131)
+	at bci.a(SourceFile:260)
+	at bcm.a(SourceFile:120)
+	at bci.c(SourceFile:255)
+	at bci.b(SourceFile:496)
+	at bbt.a(SourceFile:52)
+	at bbt$$Lambda$2368/72710810.apply(Unknown Source)
+	at bbt.a(SourceFile:153)
+	at bbt.a(SourceFile:51)
+	at ahl.D(SourceFile:2226)
+	at alt.a(SourceFile:32)
+	at alk.a(SourceFile:140)
+	at alk.a(SourceFile:148)
+	at ale.a(SourceFile:56)
+	at ale$$Lambda$2258/1761537639.test(Unknown Source)
+	at bci.a(SourceFile:1803)
+	at ale.a(SourceFile:68)
+	at ajj.a(SourceFile:94)
+	at ahm.cU(SourceFile:604)
+	at ahl.k(SourceFile:2045)
+	at ahm.k(SourceFile:473)
+	at aqc.k(SourceFile:33)
+	at ahl.h(SourceFile:1896)
+	at ahm.h(SourceFile:284)
+	at aqc.h(SourceFile:45)
+	at apn.h(SourceFile:152)
+	at bci.a(SourceFile:988)
+	at ur.a(SourceFile:392)
+	at bci.g(SourceFile:968)
+	at bci.m_(SourceFile:850)
+	at ur.m_(SourceFile:308)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:827)
+	at ts.b(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:756)
+
+-- Thread Dump --
+Details:
+	Threads: "Netty Epoll Server IO #3" Id=1829 RUNNABLE
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Epoll Server IO #2" Id=1828 RUNNABLE
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Epoll Server IO #1" Id=1827 RUNNABLE
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Server Watchdog" Id=1826 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:454)
+	at tv.run(SourceFile:45)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Server-Worker-1" Id=1825 RUNNABLE
+	at cfm.a(SourceFile:331)
+	at cfq.a(SourceFile:139)
+	at cfk.a(SourceFile:202)
+	at cfn.a(SourceFile:59)
+	at uv.b(SourceFile:136)
+	at uv.a(SourceFile:83)
+	at uv$$Lambda$2198/928092706.run(Unknown Source)
+	at ug.b(SourceFile:57)
+	...
+
+
+"Netty Epoll Server IO #0" Id=1824 RUNNABLE
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"ObjectCleanerThread" Id=1823 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@6f378b5a
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@6f378b5a
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	at io.netty.util.internal.ObjectCleaner$1.run(ObjectCleaner.java:54)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Server console handler" Id=1822 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	-  locked java.io.BufferedInputStream@61f068cc
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	-  locked java.io.InputStreamReader@65cfe02a
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	...
+
+
+"DestroyJavaVM" Id=1821 RUNNABLE
+
+
+"Server thread" Id=1818 RUNNABLE
+	at java.lang.Thread.yield(Native Method)
+	at uq.b(SourceFile:147)
+	at uq.a(SourceFile:131)
+	at bci.a(SourceFile:260)
+	at bcm.a(SourceFile:120)
+	at bci.c(SourceFile:255)
+	at bci.b(SourceFile:496)
+	at bbt.a(SourceFile:52)
+	...
+
+
+"Server Infinisleeper" Id=1819 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at ts$1.run(SourceFile:92)
+
+
+"Snooper Timer" Id=1817 WAITING on java.util.TaskQueue@20cd62f7
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@20cd62f7
+	at java.lang.Object.wait(Object.java:502)
+	at java.util.TimerThread.mainLoop(Timer.java:526)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@73f350ef
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@73f350ef
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@11a7e055
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@11a7e055
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+
+
+Stacktrace:
+	at tv.run(SourceFile:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 19w03c
+	Operating System: Linux (amd64) version 4.9.0-8-amd64
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 982395320 bytes (936 MB) / 3039297536 bytes (2898 MB) up to 3039297536 bytes (2898 MB)
+	JVM Flags: 2 total; -Xmx3000M -Xms3000M
+	Player Count: 2 / 20; [ut['shiahne'/108142, l='world', x=271.73, y=75.00, z=520.74], ut['MaxNitro'/109314, l='world', x=1309.69, y=73.00, z=1389.13]]
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
