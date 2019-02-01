@@ -1,0 +1,61 @@
+---- Minecraft Crash Report ----
+// Sorry :(
+
+Time: 1/31/19 12:50 AM
+Description: Exception ticking world
+
+java.lang.NullPointerException: Exception ticking world
+	at tx.a(SourceFile:97)
+	at tc.a(SourceFile:266)
+	at td.a(SourceFile:199)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:747)
+	at so.b(SourceFile:360)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:681)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:584)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at tx.a(SourceFile:97)
+	at tc.a(SourceFile:266)
+	at td.a(SourceFile:199)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 626 Drop: 0
+	Level seed: 731600278601194
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: {}
+	Level spawn location: World: (176,64,65), Chunk: (at 0,4,1 in 11,4; contains blocks 176,0,64 to 191,255,79), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 51522116 game time, 56568325 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 15563 (now: false), thunder time: 124362 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.b(SourceFile:747)
+	at so.b(SourceFile:360)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:681)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:584)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.13.2
+	Operating System: Linux (amd64) version 4.9.0-8-amd64
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 2131491712 bytes (2032 MB) / 3063414784 bytes (2921 MB) up to 3063414784 bytes (2921 MB)
+	JVM Flags: 2 total; -Xmx3000M -Xms3000M
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 20; []
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
