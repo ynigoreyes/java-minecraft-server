@@ -1,0 +1,66 @@
+---- Minecraft Crash Report ----
+// Why is it breaking :(
+
+Time: 2/3/19 7:49 PM
+Description: Exception ticking world
+
+java.util.ConcurrentModificationException
+	at java.util.HashMap$HashIterator.nextNode(HashMap.java:1442)
+	at java.util.HashMap$EntryIterator.next(HashMap.java:1476)
+	at java.util.HashMap$EntryIterator.next(HashMap.java:1474)
+	at asp.a(SourceFile:92)
+	at ama.a(SourceFile:63)
+	at ur.a(SourceFile:200)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:819)
+	at ts.b(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:756)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:622)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at java.util.HashMap$HashIterator.nextNode(HashMap.java:1442)
+	at java.util.HashMap$EntryIterator.next(HashMap.java:1476)
+	at java.util.HashMap$EntryIterator.next(HashMap.java:1474)
+	at asp.a(SourceFile:92)
+	at ama.a(SourceFile:63)
+	at ur.a(SourceFile:200)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 1 total; [ut['shiahne'/145179, l='world', x=421.50, y=59.00, z=495.35]]
+	Chunk stats: ServerChunkCache: 3561
+	Level seed: 731600278601194
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: {}
+	Level spawn location: World: (176,64,65), Chunk: (at 0,4,1 in 11,4; contains blocks 176,0,64 to 191,255,79), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 58014888 game time, 63867785 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 1 (now: false), thunder time: 1 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.b(SourceFile:819)
+	at ts.b(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:756)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:622)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 19w03c
+	Operating System: Linux (amd64) version 4.9.0-8-amd64
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1030548856 bytes (982 MB) / 3109027840 bytes (2965 MB) up to 3109027840 bytes (2965 MB)
+	JVM Flags: 2 total; -Xmx3000M -Xms3000M
+	Player Count: 1 / 20; [ut['shiahne'/145179, l='world', x=421.50, y=59.00, z=495.35]]
+	Data Packs: vanilla, file/multiplayer_sleepv2.0.2.zip (incompatible)
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

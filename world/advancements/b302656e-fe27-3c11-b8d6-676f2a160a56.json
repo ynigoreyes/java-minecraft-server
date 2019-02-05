@@ -41,6 +41,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/magenta_dye_from_lilac": {
+    "criteria": {
+      "has_double_plant": "2019-02-02 20:51:14 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/stone_bricks": {
     "criteria": {
       "has_stone": "2019-01-13 06:29:38 +0000"
@@ -444,6 +450,12 @@
     },
     "done": true
   },
+  "multiplayer_sleep:sleep": {
+    "criteria": {
+      "tick": "2019-02-05 07:31:10 +0000"
+    },
+    "done": false
+  },
   "minecraft:recipes/building_blocks/blue_wool": {
     "criteria": {
       "has_white_wool": "2019-01-13 06:44:19 +0000"
@@ -558,6 +570,12 @@
   "minecraft:recipes/building_blocks/oak_stairs": {
     "criteria": {
       "has_planks": "2019-01-13 05:41:57 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/quartz_stairs": {
+    "criteria": {
+      "has_quartz_block": "2019-02-01 16:52:13 +0000"
     },
     "done": true
   },
@@ -731,6 +749,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/smooth_quartz": {
+    "criteria": {
+      "has_quartz_block": "2019-02-01 16:52:13 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/yellow_bed": {
     "criteria": {
       "has_yellow_wool": "2019-01-23 21:39:43 +0000"
@@ -776,6 +800,12 @@
   "minecraft:recipes/food/cooked_porkchop": {
     "criteria": {
       "has_porkchop": "2019-01-13 21:00:06 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/baked_potato_from_campfire_cooking": {
+    "criteria": {
+      "has_potato": "2019-02-01 06:41:32 +0000"
     },
     "done": true
   },
@@ -866,6 +896,12 @@
   "minecraft:recipes/decorations/light_gray_bed": {
     "criteria": {
       "has_light_gray_wool": "2019-01-22 07:53:23 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/quartz_slab": {
+    "criteria": {
+      "has_quartz_block": "2019-02-01 16:52:13 +0000"
     },
     "done": true
   },
@@ -992,6 +1028,12 @@
   "minecraft:recipes/misc/bone_meal": {
     "criteria": {
       "has_bone": "2019-01-13 05:58:25 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_quartz_block": {
+    "criteria": {
+      "has_quartz_block": "2019-02-01 16:52:13 +0000"
     },
     "done": true
   },
@@ -1404,6 +1446,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/quartz_pillar": {
+    "criteria": {
+      "has_quartz_block": "2019-02-01 16:52:13 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/magenta_concrete_powder": {
     "criteria": {
       "has_gravel": "2019-01-13 05:58:25 +0000"
@@ -1603,6 +1651,7 @@
       "cooked_mutton": "2019-01-13 07:24:54 +0000",
       "apple": "2019-01-13 05:39:22 +0000",
       "rabbit": "2019-01-14 20:10:33 +0000",
+      "cooked_cod": "2019-02-01 05:41:39 +0000",
       "mutton": "2019-01-13 18:07:17 +0000",
       "golden_apple": "2019-01-25 01:11:19 +0000",
       "bread": "2019-01-29 02:56:26 +0000",
@@ -1978,6 +2027,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/baked_potato_from_smoking": {
+    "criteria": {
+      "has_potato": "2019-02-01 06:41:32 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/activator_rail": {
     "criteria": {
       "has_rail": "2019-01-13 05:57:34 +0000"
@@ -2032,9 +2087,21 @@
     },
     "done": true
   },
+  "minecraft:adventure/trade": {
+    "criteria": {
+      "traded": "2019-02-05 04:58:38 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/granite_slab": {
     "criteria": {
       "has_granite": "2019-01-21 17:31:11 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/baked_potato": {
+    "criteria": {
+      "has_potato": "2019-02-01 06:41:32 +0000"
     },
     "done": true
   },

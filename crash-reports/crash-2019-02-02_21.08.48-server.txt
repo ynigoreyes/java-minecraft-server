@@ -1,0 +1,120 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 2/2/19 9:08 PM
+Description: Ticking entity
+
+java.lang.IllegalStateException: Chunk not there when requested: Unloaded ticket level [3, 9]
+	at uq.a(SourceFile:134)
+	at com.mojang.datafixers.util.Either$Right.map(Either.java:99)
+	at uq.a(SourceFile:132)
+	at bci.a(SourceFile:260)
+	at bcm.a(SourceFile:120)
+	at bci.c(SourceFile:255)
+	at bcw.<init>(SourceFile:36)
+	at alo.b(SourceFile:127)
+	at aln.b(SourceFile:65)
+	at alo.a(SourceFile:107)
+	at alo.a(SourceFile:157)
+	at akg.c(SourceFile:70)
+	at ajj.a(SourceFile:102)
+	at ahm.cU(SourceFile:608)
+	at ahl.k(SourceFile:2045)
+	at ahm.k(SourceFile:473)
+	at aqc.k(SourceFile:33)
+	at aqu.k(SourceFile:267)
+	at ahl.h(SourceFile:1896)
+	at ahm.h(SourceFile:284)
+	at aqc.h(SourceFile:45)
+	at aqu.h(SourceFile:242)
+	at bci.a(SourceFile:988)
+	at ur.a(SourceFile:392)
+	at bci.g(SourceFile:968)
+	at bci.m_(SourceFile:850)
+	at ur.m_(SourceFile:308)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:827)
+	at ts.b(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:756)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:622)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at uq.a(SourceFile:134)
+	at com.mojang.datafixers.util.Either$Right.map(Either.java:99)
+	at uq.a(SourceFile:132)
+	at bci.a(SourceFile:260)
+	at bcm.a(SourceFile:120)
+	at bci.c(SourceFile:255)
+	at bcw.<init>(SourceFile:36)
+	at alo.b(SourceFile:127)
+	at aln.b(SourceFile:65)
+	at alo.a(SourceFile:107)
+	at alo.a(SourceFile:157)
+	at akg.c(SourceFile:70)
+	at ajj.a(SourceFile:102)
+	at ahm.cU(SourceFile:608)
+	at ahl.k(SourceFile:2045)
+	at ahm.k(SourceFile:473)
+	at aqc.k(SourceFile:33)
+	at aqu.k(SourceFile:267)
+	at ahl.h(SourceFile:1896)
+	at ahm.h(SourceFile:284)
+	at aqc.h(SourceFile:45)
+	at aqu.h(SourceFile:242)
+	at bci.a(SourceFile:988)
+	at ur.a(SourceFile:392)
+	at bci.g(SourceFile:968)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:zombie_pigman (aqf)
+	Entity ID: 623250
+	Entity Name: Zombie Pigman
+	Entity's Exact location: 59.26, 104.00, 103.55
+	Entity's Block location: World: (59,104,103), Chunk: (at 11,6,7 in 3,6; contains blocks 48,0,96 to 63,255,111), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at bci.m_(SourceFile:850)
+	at ur.m_(SourceFile:308)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 1088
+	Level seed: 731600278601194
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: {}
+	Level spawn location: World: (0,0,0), Chunk: (at 0,0,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 0 game time, 0 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.b(SourceFile:827)
+	at ts.b(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:756)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:622)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 19w03c
+	Operating System: Linux (amd64) version 4.9.0-8-amd64
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1219378520 bytes (1162 MB) / 3095396352 bytes (2952 MB) up to 3095396352 bytes (2952 MB)
+	JVM Flags: 2 total; -Xmx3000M -Xms3000M
+	Player Count: 0 / 20; []
+	Data Packs: vanilla, file/multiplayer_sleepv2.0.2.zip (incompatible)
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

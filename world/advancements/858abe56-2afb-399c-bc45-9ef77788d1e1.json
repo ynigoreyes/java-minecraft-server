@@ -509,6 +509,12 @@
     },
     "done": true
   },
+  "multiplayer_sleep:sleep": {
+    "criteria": {
+      "tick": "2019-02-05 07:31:10 +0000"
+    },
+    "done": false
+  },
   "minecraft:recipes/building_blocks/brick_stairs": {
     "criteria": {
       "has_brick_block": "2019-01-06 05:01:22 +0000"
@@ -644,6 +650,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_diorite_slab": {
+    "criteria": {
+      "has_polished_diorite": "2019-02-01 07:05:49 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/red_carpet": {
     "criteria": {
       "has_red_wool": "2019-01-05 06:58:28 +0000"
@@ -733,6 +745,7 @@
       "minecraft:witch": "2019-01-06 22:37:15 +0000",
       "minecraft:wither_skeleton": "2019-01-29 07:34:50 +0000",
       "minecraft:husk": "2019-01-03 05:29:58 +0000",
+      "minecraft:illager_beast": "2019-02-02 09:10:37 +0000",
       "minecraft:cave_spider": "2019-01-13 07:46:39 +0000",
       "minecraft:silverfish": "2019-01-08 04:49:50 +0000",
       "minecraft:enderman": "2019-01-05 03:29:47 +0000",
@@ -870,6 +883,12 @@
   "minecraft:recipes/building_blocks/smooth_quartz": {
     "criteria": {
       "has_quartz_block": "2019-01-31 01:05:09 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_diorite_stairs": {
+    "criteria": {
+      "has_polished_diorite": "2019-02-01 07:05:49 +0000"
     },
     "done": true
   },
@@ -1360,6 +1379,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/black_glazed_terracotta": {
+    "criteria": {
+      "has_black_terracotta": "2019-02-01 19:22:26 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/blue_terracotta": {
     "criteria": {
       "has_terracotta": "2019-01-05 08:29:15 +0000"
@@ -1716,6 +1741,12 @@
   "minecraft:recipes/food/cooked_mutton": {
     "criteria": {
       "has_mutton": "2019-01-03 08:53:24 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/light_gray_dye_from_black_white_dye": {
+    "criteria": {
+      "has_black_dye": "2019-02-01 19:22:26 +0000"
     },
     "done": true
   },
@@ -3013,6 +3044,12 @@
   "minecraft:nether/obtain_blaze_rod": {
     "criteria": {
       "blaze_rod": "2019-01-26 05:45:27 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/ol_betsy": {
+    "criteria": {
+      "shot_crossbow": "2019-02-02 09:13:45 +0000"
     },
     "done": true
   },
