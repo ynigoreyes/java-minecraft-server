@@ -1,0 +1,110 @@
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 2/7/19 5:35 AM
+Description: Ticking entity
+
+java.lang.IllegalStateException: Chunk not there when requested: Unloaded ticket level [73, 91]
+	at uq.a(SourceFile:134)
+	at com.mojang.datafixers.util.Either$Right.map(Either.java:99)
+	at uq.a(SourceFile:132)
+	at bci.a(SourceFile:260)
+	at bcm.a(SourceFile:120)
+	at bci.c(SourceFile:255)
+	at bci.b(SourceFile:496)
+	at bcv.b(SourceFile:99)
+	at ahc.a(SourceFile:2190)
+	at ahc.Z(SourceFile:423)
+	at ahl.Z(SourceFile:260)
+	at ahm.Z(SourceFile:217)
+	at ahc.h(SourceFile:382)
+	at ahl.h(SourceFile:1835)
+	at ahm.h(SourceFile:284)
+	at aqc.h(SourceFile:45)
+	at aqu.h(SourceFile:242)
+	at bci.a(SourceFile:988)
+	at ur.a(SourceFile:392)
+	at bci.g(SourceFile:968)
+	at bci.m_(SourceFile:850)
+	at ur.m_(SourceFile:308)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:827)
+	at ts.b(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:756)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:622)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at uq.a(SourceFile:134)
+	at com.mojang.datafixers.util.Either$Right.map(Either.java:99)
+	at uq.a(SourceFile:132)
+	at bci.a(SourceFile:260)
+	at bcm.a(SourceFile:120)
+	at bci.c(SourceFile:255)
+	at bci.b(SourceFile:496)
+	at bcv.b(SourceFile:99)
+	at ahc.a(SourceFile:2190)
+	at ahc.Z(SourceFile:423)
+	at ahl.Z(SourceFile:260)
+	at ahm.Z(SourceFile:217)
+	at ahc.h(SourceFile:382)
+	at ahl.h(SourceFile:1835)
+	at ahm.h(SourceFile:284)
+	at aqc.h(SourceFile:45)
+	at aqu.h(SourceFile:242)
+	at bci.a(SourceFile:988)
+	at ur.a(SourceFile:392)
+	at bci.g(SourceFile:968)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:zombie_pigman (aqf)
+	Entity ID: 740261
+	Entity Name: Zombie Pigman
+	Entity's Exact location: 1310.00, 104.00, 1399.00
+	Entity's Block location: World: (1310,104,1399), Chunk: (at 14,6,7 in 81,87; contains blocks 1296,0,1392 to 1311,255,1407), Region: (2,2; contains chunks 64,64 to 95,95, blocks 1024,0,1024 to 1535,255,1535)
+	Entity's Momentum: 0.02, -0.08, 0.06
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at bci.m_(SourceFile:850)
+	at ur.m_(SourceFile:308)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 1 total; [ut['shiahne'/740283, l='world', x=171.59, y=104.00, z=171.78]]
+	Chunk stats: ServerChunkCache: 2344
+	Level seed: 731600278601194
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: {}
+	Level spawn location: World: (0,0,0), Chunk: (at 0,0,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 0 game time, 0 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.b(SourceFile:827)
+	at ts.b(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:756)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:622)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 19w03c
+	Operating System: Linux (amd64) version 4.9.0-8-amd64
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1413854536 bytes (1348 MB) / 3087007744 bytes (2944 MB) up to 3087007744 bytes (2944 MB)
+	JVM Flags: 2 total; -Xmx3000M -Xms3000M
+	Player Count: 2 / 20; [ut['vikimen'/738097, l='world', x=319.13, y=67.88, z=486.23], ut['shiahne'/740283, l='world', x=171.59, y=104.00, z=171.78]]
+	Data Packs: vanilla, file/multiplayer_sleepv2.0.2.zip (incompatible), file/nEconomyPlus 2.12.zip (incompatible)
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

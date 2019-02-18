@@ -389,6 +389,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/dried_kelp_from_smoking": {
+    "criteria": {
+      "has_kelp": "2019-02-08 04:30:43 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/hopper": {
     "criteria": {
       "has_iron_ingot": "2019-01-02 04:45:44 +0000"
@@ -511,7 +517,7 @@
   },
   "multiplayer_sleep:sleep": {
     "criteria": {
-      "tick": "2019-02-05 07:31:10 +0000"
+      "tick": "2019-02-18 02:52:06 +0000"
     },
     "done": false
   },
@@ -767,6 +773,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/ender_eye": {
+    "criteria": {
+      "has_blaze_powder": "2019-02-08 21:06:43 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/birch_wood": {
     "criteria": {
       "has_log": "2019-01-02 06:14:40 +0000"
@@ -904,6 +916,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/light_blue_dye_from_blue_white_dye": {
+    "criteria": {
+      "has_white_dye": "2019-02-07 20:26:46 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/blue_dye": {
     "criteria": {
       "has_lapis_lazuli": "2019-01-20 19:06:11 +0000"
@@ -991,6 +1009,12 @@
   "minecraft:recipes/food/cooked_porkchop_from_campfire_cooking": {
     "criteria": {
       "has_porkchop": "2019-01-29 04:17:23 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/pink_dye_from_red_white_dye": {
+    "criteria": {
+      "has_red_dye": "2019-02-07 04:31:32 +0000"
     },
     "done": true
   },
@@ -1415,6 +1439,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/brewing/magma_cream": {
+    "criteria": {
+      "has_blaze_powder": "2019-02-08 21:06:43 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/light_blue_terracotta": {
     "criteria": {
       "has_terracotta": "2019-01-05 08:29:15 +0000"
@@ -1469,6 +1499,12 @@
   "minecraft:recipes/misc/book": {
     "criteria": {
       "has_paper": "2019-01-03 05:32:36 +0000"
+    },
+    "done": true
+  },
+  "minecraft:nether/brew_potion": {
+    "criteria": {
+      "potion": "2019-02-08 21:11:55 +0000"
     },
     "done": true
   },
@@ -1545,6 +1581,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/purple_dye": {
+    "criteria": {
+      "has_red_dye": "2019-02-07 04:31:32 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/red_dye_from_tulip": {
     "criteria": {
       "has_red_flower": "2019-01-04 09:14:45 +0000"
@@ -1608,6 +1650,18 @@
   "minecraft:husbandry/fishy_business": {
     "criteria": {
       "cod": "2019-01-09 09:10:01 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/light_gray_dye_from_gray_white_dye": {
+    "criteria": {
+      "has_white_dye": "2019-02-07 20:26:46 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/dried_kelp_from_campfire_cooking": {
+    "criteria": {
+      "has_kelp": "2019-02-08 04:30:43 +0000"
     },
     "done": true
   },
@@ -1738,9 +1792,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/brown_dye": {
+    "criteria": {
+      "has_cocoa_beans": "2019-02-08 03:30:59 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/food/cooked_mutton": {
     "criteria": {
       "has_mutton": "2019-01-03 08:53:24 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/fire_charge": {
+    "criteria": {
+      "has_blaze_powder": "2019-02-08 21:06:43 +0000"
     },
     "done": true
   },
@@ -2179,6 +2245,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/magenta_dye_from_blue_red_white_dye": {
+    "criteria": {
+      "has_rose_red": "2019-02-07 04:31:32 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/oak_fence_gate": {
     "criteria": {
       "has_planks": "2019-01-02 04:33:44 +0000"
@@ -2239,7 +2311,8 @@
       "minecraft:pig": "2019-01-03 08:58:12 +0000",
       "minecraft:sheep": "2019-01-02 05:46:50 +0000",
       "minecraft:cow": "2019-01-07 06:52:48 +0000",
-      "minecraft:chicken": "2019-01-02 04:30:54 +0000"
+      "minecraft:chicken": "2019-01-02 04:30:54 +0000",
+      "minecraft:horse": "2019-02-15 04:21:37 +0000"
     },
     "done": false
   },
@@ -2591,9 +2664,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/jack_o_lantern": {
+    "criteria": {
+      "has_carved_pumpkin": "2019-02-06 06:05:32 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/glass_pane": {
     "criteria": {
       "has_glass": "2019-01-03 21:35:43 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_nuggets": {
+    "criteria": {
+      "has_at_least_9_gold_nugget": "2019-02-15 17:10:58 +0000"
     },
     "done": true
   },
@@ -2819,6 +2904,12 @@
     },
     "done": true
   },
+  "minecraft:story/cure_zombie_villager": {
+    "criteria": {
+      "cured_zombie": "2019-02-08 21:19:10 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/light_weighted_pressure_plate": {
     "criteria": {
       "has_gold_ingot": "2019-01-03 05:59:34 +0000"
@@ -2876,6 +2967,12 @@
   "minecraft:recipes/building_blocks/green_terracotta": {
     "criteria": {
       "has_terracotta": "2019-01-05 08:29:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/jungle_sign": {
+    "criteria": {
+      "has_jungle_planks": "2019-02-08 03:38:22 +0000"
     },
     "done": true
   },

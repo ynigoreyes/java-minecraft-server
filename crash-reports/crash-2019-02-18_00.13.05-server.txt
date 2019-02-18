@@ -1,0 +1,210 @@
+---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 2/18/19 12:13 AM
+Description: Watching Server
+
+java.lang.Error
+	at io.netty.channel.epoll.Native.eventFdWrite(Native Method)
+	at io.netty.channel.epoll.EpollEventLoop.wakeup(EpollEventLoop.java:154)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.execute(SingleThreadEventExecutor.java:774)
+	at ip.b(SourceFile:205)
+	at ip.a(SourceFile:174)
+	at vl.a(SourceFile:1034)
+	at vl.a(SourceFile:1017)
+	at tg.a(SourceFile:110)
+	at tg.b(SourceFile:58)
+	at tg$$Lambda$1748/1738792326.run(Unknown Source)
+	at com.mojang.brigadier.CommandDispatcher.execute(CommandDispatcher.java:132)
+	at bx$b.a(SourceFile:86)
+	at qp$a.a(SourceFile:205)
+	at qp.a(SourceFile:114)
+	at qp.ab_(SourceFile:76)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:802)
+	at ts.b(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:756)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:622)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at io.netty.channel.epoll.Native.eventFdWrite(Native Method)
+	at io.netty.channel.epoll.EpollEventLoop.wakeup(EpollEventLoop.java:154)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.execute(SingleThreadEventExecutor.java:774)
+	at ip.b(SourceFile:205)
+	at ip.a(SourceFile:174)
+	at vl.a(SourceFile:1034)
+	at vl.a(SourceFile:1017)
+	at tg.a(SourceFile:110)
+	at tg.b(SourceFile:58)
+	at tg$$Lambda$1748/1738792326.run(Unknown Source)
+	at com.mojang.brigadier.CommandDispatcher.execute(CommandDispatcher.java:132)
+	at bx$b.a(SourceFile:86)
+	at qp$a.a(SourceFile:205)
+	at qp.a(SourceFile:114)
+	at qp.ab_(SourceFile:76)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:802)
+	at ts.b(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:756)
+
+-- Thread Dump --
+Details:
+	Threads: "Server-Worker-7" Id=1848 RUNNABLE
+	at java.util.concurrent.CompletableFuture.cleanStack(CompletableFuture.java:500)
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:553)
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:1054)
+	at java.util.concurrent.CompletableFuture$BiApply.tryFire(CompletableFuture.java:1073)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:474)
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:561)
+	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:929)
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:442)
+	...
+
+
+"Netty Epoll Server IO #3" Id=1840 RUNNABLE (in native)
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Epoll Server IO #2" Id=1839 RUNNABLE (in native)
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Epoll Server IO #1" Id=1838 RUNNABLE
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Server Watchdog" Id=1837 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:454)
+	at tv.run(SourceFile:45)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Resource IO {0}" Id=1825 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2f49da8a
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2f49da8a
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Epoll Server IO #0" Id=1824 RUNNABLE (in native)
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"ObjectCleanerThread" Id=1823 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@218e3113
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@218e3113
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	at io.netty.util.internal.ObjectCleaner$1.run(ObjectCleaner.java:54)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Server console handler" Id=1822 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	-  locked java.io.BufferedInputStream@25b1b1fa
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	-  locked java.io.InputStreamReader@60b33b28
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	...
+
+
+"DestroyJavaVM" Id=1821 RUNNABLE
+
+
+"Server thread" Id=1818 RUNNABLE
+	at io.netty.channel.epoll.Native.eventFdWrite(Native Method)
+	at io.netty.channel.epoll.EpollEventLoop.wakeup(EpollEventLoop.java:154)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.execute(SingleThreadEventExecutor.java:774)
+	at ip.b(SourceFile:205)
+	at ip.a(SourceFile:174)
+	at vl.a(SourceFile:1034)
+	at vl.a(SourceFile:1017)
+	at tg.a(SourceFile:110)
+	...
+
+
+"Server Infinisleeper" Id=1819 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at ts$1.run(SourceFile:92)
+
+
+"Snooper Timer" Id=1817 WAITING on java.util.TaskQueue@1cf203e
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@1cf203e
+	at java.lang.Object.wait(Object.java:502)
+	at java.util.TimerThread.mainLoop(Timer.java:526)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@51999fbd
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@51999fbd
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@790fda15
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@790fda15
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+
+
+Stacktrace:
+	at tv.run(SourceFile:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 19w03c
+	Operating System: Linux (amd64) version 4.9.0-8-amd64
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 593163480 bytes (565 MB) / 2942828544 bytes (2806 MB) up to 2942828544 bytes (2806 MB)
+	JVM Flags: 2 total; -Xmx3000M -Xms3000M
+	Player Count: 1 / 20; [ut['shiahne'/210501, l='world', x=215.96, y=70.00, z=526.71]]
+	Data Packs: vanilla, file/multiplayer_sleepv2.0.2.zip (incompatible), file/nEconomyPlus 2.12.zip (incompatible)
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
