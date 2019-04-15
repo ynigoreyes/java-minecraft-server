@@ -494,7 +494,7 @@
   },
   "multiplayer_sleep:sleep": {
     "criteria": {
-      "tick": "2019-03-05 07:34:51 +0000"
+      "tick": "2019-03-07 04:53:35 +0000"
     },
     "done": false
   },
@@ -2068,7 +2068,8 @@
   },
   "minecraft:husbandry/bred_all_animals": {
     "criteria": {
-      "minecraft:cow": "2019-01-24 08:54:36 +0000"
+      "minecraft:cow": "2019-01-24 08:54:36 +0000",
+      "minecraft:chicken": "2019-03-07 04:54:07 +0000"
     },
     "done": false
   },
